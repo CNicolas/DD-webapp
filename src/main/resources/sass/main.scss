@@ -1,0 +1,26 @@
+@media only screen and (min-width: 990px) {
+    main {
+        margin-left: 300px;
+    }
+}
+
+nav {
+    padding-left: 16px;
+
+    .sidenav-trigger {
+        cursor: pointer;
+        margin-left: 0;
+    }
+}
+
+.sidenav {
+    margin-top: 64px;
+
+    .logo {
+        padding: 0;
+
+        img {
+            width: 300px;
+        }
+    }
+}
