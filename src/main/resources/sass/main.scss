@@ -18,9 +18,15 @@ nav {
 
     .logo {
         padding: 0;
+        display: block;
 
         img {
-            width: 300px;
+            display: block;
+            max-width: 300px;
+            max-height: 170px;
+            width: auto;
+            height: auto;
+            margin: auto;
         }
     }
 }
