@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var elems = document.querySelectorAll('.sidenav')
-    var instances = M.Sidenav.init(elems, {
+    initializeSideNav()
+})
+
+function initializeSideNav() {
+    var sidenavElement = document.querySelectorAll('.sidenav')
+    M.Sidenav.init(sidenavElement, {
         draggable: true
     })
-})
+}
