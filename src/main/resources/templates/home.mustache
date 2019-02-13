@@ -2,28 +2,8 @@
 {{> commons/navigation }}
 
 <main>
-    <h1>Home page</h1>
     <div class="container">
-        <form method="post"
-              action="/player">
-            <div class="row">
-                <div class="input-field col s6">
-                    <input id="name"
-                           name="name"
-                           type="text">
-                    <label for="name">Player name</label>
-                </div>
-
-                <div class="input-field col s1 offset-l1">
-                    <button type="submit"
-                            class="btn waves-effect waves-light"
-                            name="createPlayer">Create player
-                        <i class="fas fa-plus right"></i>
-                    </button>
-                </div>
-            </div>
-        </form>
-
+        <h1>Home page</h1>
 
         {{#playersExist}}
             <ul class="collection">
@@ -36,5 +16,6 @@
     </div>
 </main>
 
+{{> commons/scripts}}
 {{> commons/footer}}
 

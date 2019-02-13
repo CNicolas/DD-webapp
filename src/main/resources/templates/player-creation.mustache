@@ -1,0 +1,36 @@
+{{> commons/header }}
+{{> commons/navigation }}
+
+<main>
+    <div class="container">
+        <h1>Créez votre personnage !</h1>
+
+        <form method="post"
+              action="/player">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="name"
+                           name="name"
+                           type="text"
+                           minlength="3"
+                           required>
+                    <label for="name">Player name</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                </div>
+            </div>
+
+            <div class="row">
+                <button type="submit"
+                        class="modal-close btn waves-effect waves-light">Terminé !
+                </button>
+            </div>
+        </form>
+    </div>
+</main>
+
+{{> commons/scripts}}
+{{> commons/footer}}

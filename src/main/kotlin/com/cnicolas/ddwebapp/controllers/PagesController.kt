@@ -44,4 +44,10 @@ class PagesController(@Autowired private val playerRepository: PlayerRepository)
             return ModelAndView("redirect:/")
         }
     }
+
+    @GetMapping("/player-creation")
+    fun playerCreation(model: ModelMap): ModelAndView {
+        model["pageTitle"] = "Création d'un personnage"
+        return ModelAndView("player-creation", model)
+    }
 }
