@@ -1,32 +1,9 @@
-@media only screen and (min-width: 990px) {
+@import 'override-materialize';
+@import 'nav';
+
+@media only screen and (min-width: 900px) {
     main {
         margin-left: 300px;
     }
 }
 
-nav {
-    padding-left: 16px;
-
-    .sidenav-trigger {
-        cursor: pointer;
-        margin-left: 0;
-    }
-}
-
-.sidenav {
-    margin-top: 64px;
-
-    .logo {
-        padding: 0;
-        display: block;
-
-        img {
-            display: block;
-            max-width: 300px;
-            max-height: 170px;
-            width: auto;
-            height: auto;
-            margin: auto;
-        }
-    }
-}
