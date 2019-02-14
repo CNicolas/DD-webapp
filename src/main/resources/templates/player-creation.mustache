@@ -7,30 +7,49 @@
 
         <form method="post"
               action="/player">
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="name"
-                           name="name"
-                           type="text"
-                           minlength="3"
-                           required>
-                    <label for="name">Player name</label>
-                </div>
-            </div>
+            <ul class="stepper linear">
+                <li class="step active">
+                    <div class="step-title waves-effect">Nom et race</div>
+                    <div class="step-content">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="name"
+                                       name="name"
+                                       type="text"
+                                       minlength="3"
+                                       required>
+                                <label for="name">Nom du personnage</label>
+                            </div>
+                        </div>
+                    </div>
+                </li>
 
-            <div class="row">
-                <div class="input-field col s12">
-                </div>
-            </div>
-
-            <div class="row">
-                <button type="submit"
-                        class="modal-close btn waves-effect waves-light">Terminé !
-                </button>
-            </div>
+                <li class="step">
+                    <div class="step-title waves-effect">Résultat</div>
+                    <div class="step-content"></div>
+                    <div class="step-actions">
+                        <button type="submit"
+                                class="btn waves-effect waves-light">Terminé !
+                        </button>
+                    </div>
+                </li>
+            </ul>
         </form>
     </div>
 </main>
 
 {{> commons/scripts}}
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<link rel="stylesheet"
+      type="text/css"
+      href="/css/mstepper.min.css">
+<script type="text/javascript"
+        src="/js/mstepper.min.js"></script>
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        new MStepper(document.querySelector('.stepper'))
+    })
+</script>
 {{> commons/footer}}
