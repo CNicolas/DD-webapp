@@ -1,5 +1,21 @@
-{{> commons/header }}
-{{> commons/navigation }}
+<!DOCTYPE html>
+<html lang="fr"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Création de personnage</title>
+    <th:block th:include="commons/headers" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <!--suppress HtmlUnknownTarget -->
+    <link rel="stylesheet"
+          type="text/css"
+          href="/css/mstepper.min.css">
+</head>
+<body>
+
+<th:block th:include="commons/navbar" />
+<th:block th:include="commons/sidenav" />
 
 <main>
     <div class="container">
@@ -38,12 +54,8 @@
     </div>
 </main>
 
-{{> commons/scripts}}
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-<link rel="stylesheet"
-      type="text/css"
-      href="/css/mstepper.min.css">
+<th:block th:include="commons/scripts" />
+<!--suppress HtmlUnknownTarget -->
 <script type="text/javascript"
         src="/js/mstepper.min.js"></script>
 
@@ -52,4 +64,6 @@
         new MStepper(document.querySelector('.stepper'))
     })
 </script>
-{{> commons/footer}}
+
+</body>
+</html>

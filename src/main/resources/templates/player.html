@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Personnage</title>
+    <th:block th:include="commons/headers" />
+</head>
+<body>
+
+<th:block th:include="commons/navbar" />
+<th:block th:include="commons/sidenav" />
+
+<main>
+    <div class="container">
+        <h1>Player page</h1>
+        <!--/*@thymesVar id="player" type="com.cnicolas.ddwebapp.database.entities.Player"*/-->
+        <h2 th:text="'Hello ' + ${player.name}"></h2>
+    </div>
+</main>
+
+<th:block th:include="commons/scripts" />
+
+</body>
+</html>

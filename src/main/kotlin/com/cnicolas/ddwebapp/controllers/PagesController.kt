@@ -14,22 +14,18 @@ import org.springframework.web.servlet.ModelAndView
 class PagesController(@Autowired private val playerRepository: PlayerRepository) {
     @GetMapping("/")
     fun home(model: ModelMap): ModelAndView {
-        model["pageTitle"] = "Home"
         val players = playerRepository.findAll()
         model["players"] = players
-        model["playersExist"] = players.isNotEmpty()
         return ModelAndView("home", model)
     }
 
     @GetMapping("/skills")
     fun skills(model: ModelMap): ModelAndView {
-        model["pageTitle"] = "Skills"
         return ModelAndView("skills", model)
     }
 
     @GetMapping("/actions")
     fun actions(model: ModelMap): ModelAndView {
-        model["pageTitle"] = "Actions"
         return ModelAndView("actions", model)
     }
 
@@ -37,7 +33,6 @@ class PagesController(@Autowired private val playerRepository: PlayerRepository)
     fun player(model: ModelMap, @PathVariable("playerId") playerId: Long): ModelAndView {
         val player = playerRepository.findByIdOrNull(playerId)
         player?.let {
-            model["pageTitle"] = "Player " + player.name
             model["player"] = player
             return ModelAndView("player", model)
         } ?: run {
@@ -47,7 +42,6 @@ class PagesController(@Autowired private val playerRepository: PlayerRepository)
 
     @GetMapping("/player-creation")
     fun playerCreation(model: ModelMap): ModelAndView {
-        model["pageTitle"] = "Création d'un personnage"
         return ModelAndView("player-creation", model)
     }
 }
